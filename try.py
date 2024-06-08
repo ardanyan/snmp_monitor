@@ -32,7 +32,7 @@ def save_snmp_walk(ip, filename, community='public'):
             file.write(line + '\n')
 
 if __name__ == "__main__":
-    ip = '192.168.0.1'  # IP adresini gerektiği gibi güncelleyin
+    ip = '192.168.0.1'
     community = 'public'
     filename = 'snmpwalk_output.txt'
     save_snmp_walk(ip, filename, community)

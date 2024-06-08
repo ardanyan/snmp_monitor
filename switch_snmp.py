@@ -54,7 +54,7 @@ class SwitchSNMP:
             return True
 
     def reset_switch(self):
-        reset_oid = '1.3.6.1.4.1.2021.10.1.100'  # Example OID, change to actual
+        reset_oid = '1.3.6.1.4.1.2021.10.1.100'
         result = self.set_snmp_data(reset_oid, 1)
         if result is True:
             return "Switch reset successfully"
@@ -62,7 +62,7 @@ class SwitchSNMP:
             return f"Failed to reset switch: {result}"
 
     def toggle_port(self, port_number, state):
-        port_oid = f'1.3.6.1.2.1.2.2.1.7.{port_number}'  # ifAdminStatus OID for the port
+        port_oid = f'1.3.6.1.2.1.2.2.1.7.{port_number}'
         result = self.set_snmp_data(port_oid, state)
         if result is True:
             return f"Port {port_number} set to state {state} successfully"

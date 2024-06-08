@@ -57,6 +57,4 @@ class SNMPGUI:
         self.device.reset_switch()
         messagebox.showinfo("Reset Switch", "Switch has been reset.")
 
-    def toggle_port(self):
-        # Port toggling logic here
-        pass
+

@@ -48,7 +48,7 @@ class SNMPVisualizer:
 
         add_nodes_edges(self.G, self.snmp_device.snmp_tree)
 
-        self.pos = self.vertical_layout(self.G, root="1.3.6.1.2.1.1")  # Yukarıdan aşağıya ağaç düzeni
+        self.pos = self.vertical_layout(self.G, root="1.3.6.1.2.1.1")
         self.labels = nx.get_node_attributes(self.G, 'label')
         nx.draw(self.G, self.pos, labels=self.labels, with_labels=True, node_size=3000, node_color="skyblue",
                 font_size=10, font_color="black", font_weight="bold", arrows=False)
